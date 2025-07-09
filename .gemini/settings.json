@@ -1,19 +1,52 @@
 {
   "hierarchicalMemory": {
     "enabled": true,
-    "filename": "GEMINI.md"
+    "filename": "GEMINI.md",
+    "depth": 3,
+    "includeExamples": true
   },
   "commands": {
     "enabled": true,
-    "directory": ".gemini/commands"
+    "directory": ".gemini/commands",
+    "customCommands": [
+      "analyze-codebase",
+      "create-tests", 
+      "review-code",
+      "validate-context"
+    ]
   },
   "model": "gemini-2.5-pro",
+  "contextWindow": 1000000,
   "searchProviders": {
     "enabled": true,
-    "providers": ["google"]
+    "providers": ["google"],
+    "realTimeResearch": true
   },
   "checkpointing": {
     "enabled": true,
-    "directory": ".gemini/checkpoints"
+    "directory": ".gemini/checkpoints",
+    "autoSave": true,
+    "maxCheckpoints": 10
+  },
+  "codeGeneration": {
+    "enableTypeHints": true,
+    "includeTests": true,
+    "followProjectPatterns": true,
+    "validateOutput": true
+  },
+  "mcpServers": {
+    "filesystem": {
+      "enabled": true,
+      "rootPath": "."
+    },
+    "web": {
+      "enabled": true,
+      "allowedDomains": ["*"]
+    }
+  },
+  "validation": {
+    "contextQuality": true,
+    "codeQuality": true,
+    "securityChecks": true
   }
 }
