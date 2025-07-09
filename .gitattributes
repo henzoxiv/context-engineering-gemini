@@ -1,2 +1,42 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Language detection configuration for GitHub
+# Documentation files - exclude from language stats
+*.md linguist-documentation
+*.txt linguist-documentation
+
+# Configuration files - exclude from language stats  
+*.json linguist-data
+*.yaml linguist-data
+*.yml linguist-data
+
+# Shell scripts and automation - mark as vendored to exclude
+*.sh linguist-vendored
+*.bat linguist-vendored
+
+# Ensure Python files are properly detected
+*.py linguist-language=Python
+
+# JavaScript/TypeScript files
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript
+
+# Examples should be counted as their respective languages
+examples/**/*.py linguist-language=Python
+examples/**/*.js linguist-language=JavaScript
+examples/**/*.ts linguist-language=TypeScript
+
+# Workflows and templates - mark as documentation
+workflows/*.md linguist-documentation
+templates/**/*.md linguist-documentation
+docs/**/*.md linguist-documentation
+
+# Language detection configuration for GitHub
+*.md linguist-documentation
+*.sh linguist-vendored
+*.py linguist-language=Python
+examples/**/*.py linguist-language=Python
+workflows/*.md linguist-documentation
