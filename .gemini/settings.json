@@ -1,0 +1,19 @@
+{
+  "hierarchicalMemory": {
+    "enabled": true,
+    "filename": "GEMINI.md"
+  },
+  "commands": {
+    "enabled": true,
+    "directory": ".gemini/commands"
+  },
+  "model": "gemini-2.5-pro",
+  "searchProviders": {
+    "enabled": true,
+    "providers": ["google"]
+  },
+  "checkpointing": {
+    "enabled": true,
+    "directory": ".gemini/checkpoints"
+  }
+}
